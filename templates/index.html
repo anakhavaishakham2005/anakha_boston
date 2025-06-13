@@ -3,59 +3,45 @@
 <head>
     <title>Boston Housing Price Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 <body>
     <h2><u>Boston Housing Price Prediction</u></h2>
+
     <form action="/predict" method="post">
+  <div class="container">
 
-        <label>CRIM:</label><br>
-        <input type="text" name="CRIM"><br>
+  <!-- First Row -->
+  <div class="row">
+    <div class="form-group"><label>CRIM:</label><input type="text" name="CRIM"></div>
+    <div class="form-group"><label>ZN:</label><input type="text" name="ZN"></div>
+    <div class="form-group"><label>INDUS:</label><input type="text" name="INDUS"></div>
+    <div class="form-group"><label>CHAS:</label><input type="text" name="CHAS"></div>
+    <div class="form-group"><label>NOX:</label><input type="text" name="NOX"></div>
+    <div class="form-group"><label>RM:</label><input type="text" name="RM"></div>
+  </div>
 
-        <label>ZN:</label><br>
-        <input type="text" name="ZN"><br>
+  <!-- Second Row -->
+  <div class="row">
+    <div class="form-group"><label>AGE:</label><input type="text" name="AGE"></div>
+    <div class="form-group"><label>DIS:</label><input type="text" name="DIS"></div>
+    <div class="form-group"><label>RAD:</label><input type="text" name="RAD"></div>
+    <div class="form-group"><label>TAX:</label><input type="text" name="TAX"></div>
+    <div class="form-group"><label>PTRATIO:</label><input type="text" name="PTRATIO"></div>
+    <div class="form-group"><label>B:</label><input type="text" name="B"></div>
+    <div class="form-group"><label>LSTAT:</label><input type="text" name="LSTAT"></div>
+  </div>
 
-        <label>INDUS:</label><br>
-        <input type="text" name="INDUS"><br>
+  <!-- Submit button full width -->
+  <div class="submit-wrap">
+    <input type="submit" value="Predict">
+  </div>
+</div>
 
-        <label>CHAS:</label><br>
-        <input type="text" name="CHAS"><br>
-
-        <label>NOX:</label><br>
-        <input type="text" name="NOX"><br>
-
-        <label>RM:</label><br>
-        <input type="text" name="RM"><br>
-
-        <label>AGE:</label><br>
-        <input type="text" name="AGE"><br>
-
-        <label>DIS:</label><br>
-        <input type="text" name="DIS"><br>
-
-        <label>RAD:</label><br>
-        <input type="text" name="RAD"><br>
-
-        <label>TAX:</label><br>
-        <input type="text" name="TAX"><br>
-
-        <label>PTRATIO:</label><br>
-        <input type="text" name="PTRATIO"><br>
-
-        <label>B:</label><br>
-        <input type="text" name="B"><br>
-
-        <label>LSTAT:</label><br>
-        <input type="text" name="LSTAT"><br>
-
-        <br>
-        <input type="submit" value="Predict">
-
-    </form>
+</form>
+    <br>
 
     {% if prediction_text %}
         <h3>{{ prediction_text }}</h3>
     {% endif %}
-
 </body>
 </html>
