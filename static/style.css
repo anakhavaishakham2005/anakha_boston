@@ -7,7 +7,7 @@
     box-sizing: border-box;
     zoom: 1;
     /* magnifying all elements */
-    font-smoothing: antialiased;
+    font-smooth: antialiased;
     -webkit-font-smoothing: antialiased;
     
 }
